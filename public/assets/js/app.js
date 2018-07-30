@@ -10,8 +10,8 @@ $("#scrape").on("click", function() {
 });
 
 //Set clicked nav option to active
-$(".navbar-nav li").click(function() {
-   $(".navbar-nav li").removeClass("active");
+$(".nav-item nav-link li").click(function() {
+   $(".nav-item nav-link li").removeClass("active");
    $(this).addClass("active");
 });
 

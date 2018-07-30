@@ -1,19 +1,12 @@
-<!--Homepage-->
-<div class="container">
-    <div class="col-md-12 jumbotron">
-        <div class="text-center">
-            <h1> New York Times Mongo Scraper</h1>
-        </div>
 
-    </div>
     <div class="col-md-12">
         {{#if article}}
             {{#each article}}
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
                     <h4>{{this.title}}</h4>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     <p> {{this.summary}}</p>
                     <a href={{this.link}} target="_blank">{{this.link}}</a>
                     <br><br>
@@ -22,8 +15,8 @@
             </div>
             {{/each}}
         {{else}}
-        <div class="panel panel-default">
-            <div class="panel-body">
+        <div class="card mb-4">
+            <div class="card-body">
             <h4>Uh Oh. Looks like we don't have any new articles.</h4>
             </div>
          </div>
