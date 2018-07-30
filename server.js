@@ -31,12 +31,12 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost/nytscraper");
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytscraper";
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URI);
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
-});
+mongoose.connect("mongodb://heroku_n2d04qv4:11kbbp3d9n4umo439toi5lpdgt@ds159631.mlab.com:59631/heroku_n2d04qv4");
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI, {
+//   useMongoClient: true
+// });
 
 // Require our routes
 require('./routes/routes.js')(app);
