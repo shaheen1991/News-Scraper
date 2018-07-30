@@ -31,8 +31,12 @@ app.use(express.static("public"));
 // mongoose.connect("mongodb://localhost/nytscraper");
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytscraper";
+// mongoose.Promise = Promise;
+// mongoose.connect(MONGODB_URI);
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, {
+  useMongoClient: true
+});
 
 // Require our routes
 require('./routes/routes.js')(app);
