@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mongo Scraper</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+
+  {{!-- Navbar --}}
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1">Mongo Scraper</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/saved">Saved Articles</a>
+        <span class="nav-item">&nbsp;</span>
+      </div>
+      <div class="navbar-nav">
+        <button type="button" class="btn btn-danger btn-sm" id="scrapeButton">SCRAPE NEW ARTICLES</button>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  {{!-- Scrape results modal --}}
+  <div class="modal fade" id="scrapeModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="scrapeModalLabel">Scrape Results</h5>
+          <button type="button" class="close" id="closeModal" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="text-center" id="numArticles"></h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="closeModal" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Jumbotron Page Title --}}
+  <div class="jumbotron jumbotron-fluid text-center text-white">
+      <h1 class="display-3">Mongo Scraper</h1>
+      <h3 class="display-5">New York Times Edition</h3>
+      <p>By Steve Zinski</p>
+  </div>
+
+  {{{ body }}}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.1/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+
+</html>
