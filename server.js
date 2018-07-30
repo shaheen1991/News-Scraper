@@ -29,10 +29,12 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 // mongoose.Promise = Promise;
 // mongoose.connect("mongodb://localhost/nytscraper");
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytscraper";
-mongoose.Promise = Promise;
 mongoose.connect("mongodb://heroku_n2d04qv4:11kbbp3d9n4umo439toi5lpdgt@ds159631.mlab.com:59631/heroku_n2d04qv4");
+var db = mongoose.connection;
+
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/nytscraper";
+// mongoose.Promise = Promise;
+// mongoose.connect("mongodb://heroku_n2d04qv4:11kbbp3d9n4umo439toi5lpdgt@ds159631.mlab.com:59631/heroku_n2d04qv4");
 // mongoose.Promise = Promise;
 // mongoose.connect(MONGODB_URI, {
 //   useMongoClient: true
