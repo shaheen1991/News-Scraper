@@ -3,6 +3,7 @@ var exphbs = require("express-handlebars");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var request = require('request');
 
 // Require all database models
 var db = require("./models");
